@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>motos pecas</title>
+    </head>
+    <body>
+       <div class="inicio">
+          <h1>motos</h1>
+          <input type="text" placeholder="pesquisa"><button onclick="on()">sourch</button>
+        </div>
+        <div class="h2" style="display:none;">
+        <h2>nenhum resultado </h2>
+        </div>
+        <div class="pecas">
+    <div class="pecas1">
+           <h1>motor</h1>   <img src="https://picsum.photos/151">
+             <p>R$10,00 <del>R$12,00</del></p>
+          </div> 
+            <div class="pecas1">
+           <h1>freio</h1>
+           <img src="https://picsum.photos/150">
+           <p>R$40,00 <del>R$52,00</del></p>
+           </div>
+                <div class="pecas2">
+           <h1>pedal</h1>
+     <img src="https://picsum.photos/149">
+           <p>R$57,00 <del>R$55,00</del></p>
+           </div>
+        </div>
+    </body>
+    <style>
+       .inicio{
+           background: #333;
+           text-align: center;
+           color:#fff;
+           position:fixed ;
+           width:100%;
+           margin-top:-110px;
+           bottom: 530px;
+       } 
+       input{
+           outline-color: black;
+           border-radius:10px;
+           width: 200px;
+           height: 25px;
+           border-color: #333;
+           text-align: center;
+           
+       }
+        .pecas2{
+           background: #777;
+           display:inline-block;
+           width: 200px;
+           text-align: center;
+           color: #fff;
+           margin:10px;
+           border-radius:7px;
+           border:1px solid black ;
+            
+       }
+       .pecas1{
+           background: #777;
+           display:inline-block;
+           width: 200px;
+           text-align: center;
+           color: #fff;
+           margin:10px;
+           border-radius:7px;
+           border:1px solid black ;
+            
+       }
+       .pecas{
+           text-align: center;
+          margin-top: 110px;
+           
+       }
+       button{
+           border:none;
+           border-radius:10px;
+       }
+       img{
+           border-radius:10px;
+       }
+       img:hover{
+         width: 200px;
+         
+       }
+       .h2{
+         margin-top: 110px;
+       }
+    </style>
+    <script>
+        function on() {
+            var input = document.querySelector ("input").value
+            
+            var p = document.querySelector(".pecas")
+            var res1 = document.querySelector (".pecas2")
+            
+            var h2 = document.querySelector(".h2")
+            
+            var res = document.querySelector(".pecas1")
+            
+            if(input == "Freio"){
+                res.style.display = "none"
+                res1.style.display = "none"
+                p.style.display = "block"
+            }else{
+              p.style.display = "none"
+              h2.style.display = "block"
+            }
+            if(input == "Tudo"){
+                p.style.display = "block"
+                res.style.display = "block"
+                res1.style.display = "block"
+            }else{
+              h2.style.display = "block"
+            }
+             if(input == ""){
+                 h2.style.display = "block"
+                 
+             }else{
+                 h2.style.display = "none"
+             }   
+            }
+            
+        
+    </script>
+</html>
